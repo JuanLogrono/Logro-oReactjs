@@ -1,0 +1,5 @@
+.eventos__contador--orden{
+    width: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+}

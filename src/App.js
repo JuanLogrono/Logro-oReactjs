@@ -1,11 +1,16 @@
-import {NavBar} from './components/navBar';
+import Catalogo from './components/Catalogo';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
-
-    <div>      
-      <NavBar/>
-    </div>
+    <>
+      <header>
+        <NavBar />
+      </header>
+      <section>
+        <Catalogo />
+      </section>
+    </>
   );
 }
 
