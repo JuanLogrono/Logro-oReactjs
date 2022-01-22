@@ -1,4 +1,4 @@
-import Catalogo from './components/Catalogo';
+import ItemList from './components/ItemList';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
         <NavBar />
       </header>
       <section>
-        <Catalogo />
+        <ItemList />
       </section>
     </>
   );
