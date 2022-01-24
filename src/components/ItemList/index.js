@@ -1,13 +1,20 @@
-import React from 'react'
-import { ItemListContainer } from './ItemListContainer'
-import './style.css'
+import React, { useEffect, useState } from 'react';
+import { GetProducts } from './dataBase';
+import Item from './Item';
+import './style.css';
+
 
 const ItemList = () => {
+    const [saveProd, setSaveProd] = useState([]);
+    useEffect(() => {
+        GetProducts().then((result) => setSaveProd(result))
+            .catch((error) => console.log(error))
+    }, []);
     return (
         <article className='itemList__article--order'>
-            <ItemListContainer producto='Remera' descripcion='Remera Roja' precio={2500} stock={10} initial={0} />
-            <ItemListContainer producto='Pantalón' descripcion='Pantalón negro' precio={7000} stock={15} initial={0} />
-            <ItemListContainer producto='Bufanda' descripcion='Bufanda Azul' precio={1500} stock={20} initial={0} />
+            {saveProd.map((item) => (
+                <Item key={item.id} items={item} />
+            ))}
         </article>
     )
 }
