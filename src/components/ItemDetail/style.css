@@ -1,0 +1,23 @@
+.ItemDetailContainer__cardDetail--order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    border: black 2px solid;
+    margin: auto; 
+
+}
+
+.ItemDetailContainer__descriptionDetail--style{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    margin: 2rem 4rem
+}
+
+.itemDetailContainer__img--size{
+    height: 20rem;
+    width: 12rem;
+    margin: 1rem 2rem;
+}
