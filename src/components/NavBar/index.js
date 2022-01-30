@@ -1,6 +1,6 @@
 import './style.css';
 import { IconoCarrito, IconoLupa } from '../iconos/Iconos'
-import logo from '../iconos/navBarAssets/logo.png';
+import logo from '../iconos/imagenes/logo.png';
 import NavContainer from './NavContainer';
 import { Link } from 'react-router-dom';
 

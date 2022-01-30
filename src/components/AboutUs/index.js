@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../iconos/navBarAssets/logo.png';
+import logo from '../iconos/imagenes/logo.png';
 import './style.css'
 
 const AboutUs = () => {
