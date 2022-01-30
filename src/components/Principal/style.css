@@ -1,0 +1,11 @@
+.principal__article--order {
+  display: grid;
+}
+
+.principal__img--size {
+  height: 16rem;
+  width: 100%;
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}

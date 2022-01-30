@@ -1,0 +1,364 @@
+{
+    "products": [
+        {
+            "id": "h1",
+            "productName": "Buzo Negro",
+            "price": 3000,
+            "stock": 15,
+            "description": "buzo negro con capucha",
+            "search": "buzo negro negra con capucha canguro hombre",
+            "orden": 1,
+            "img": "../assets/h1.jpg"
+        },
+        {
+            "id": "h2",
+            "productName": "Remera negra",
+            "price": 1500,
+            "stock": 20,
+            "description": "remera negra manga corta",
+            "search": "remera negro negra manga corta hombre",
+            "orden": 4,
+            "img": "../assets/h2.jpg"
+        },
+        {
+            "id": "h3",
+            "productName": "jean negro",
+            "price": 3500,
+            "stock": 25,
+            "description": "pantalon jean negro",
+            "search": "pantalon jean negro negra hombre",
+            "orden": 7,
+            "img": "../assets/h3.jpg"
+        },
+        {
+            "id": "h4",
+            "productName": "Buzo blanco",
+            "price": 3100,
+            "stock": 20,
+            "description": "buzo blanco con capucha",
+            "search": "buzo blanco blanca con capucha canguro hombre",
+            "orden": 10,
+            "img": "../assets/h4.jpg"
+        },
+        {
+            "id": "h5",
+            "productName": "jean blanco",
+            "price": 2900,
+            "stock": 30,
+            "description": "pantalon de jaen blanco",
+            "search": "pantalon jean blanco blanca hombre",
+            "orden": 13,
+            "img": "../assets/h5.jpg"
+        },
+        {
+            "id": "h6",
+            "productName": "Remera blanca",
+            "price": 2100,
+            "stock": 10,
+            "description": "rojo, amarillo , gris",
+            "search": "remera blanco blanca manga corta hombre",
+            "orden": 16,
+            "img": "../assets/h6.jpg"
+        },
+        {
+            "id": "h7",
+            "productName": "Buzo azul",
+            "price": 3150,
+            "stock": 15,
+            "description": "buzo azul con capucha",
+            "search": "buzo azul con capucha canguro hombre",
+            "orden": 19,
+            "img": "../assets/h7.jpg"
+        },
+        {
+            "id": "h8",
+            "productName": "Remera azul",
+            "price": 950,
+            "stock": 20,
+            "description": "Remera azul manga corta",
+            "search": "remera azul manga corta hombre",
+            "orden": 22,
+            "img": "../assets/h8.jpg"
+        },
+        {
+            "id": "h9",
+            "productName": "jean azul",
+            "price": 3400,
+            "stock": 25,
+            "description": "pantalón jean azul",
+            "search": "pantalon jean azul hombre",
+            "orden": 25,
+            "img": "../assets/h9.jpg"
+        },
+        {
+            "id": "h10",
+            "productName": "Buzo rojo",
+            "price": 2900,
+            "stock": 25,
+            "description": "buzo rojo con capucha",
+            "search": "buzo rojo con capucha canguro hombre",
+            "orden": 28,
+            "img": "../assets/h10.jpg"
+        },
+        {
+            "id": "h11",
+            "productName": "Remera roja",
+            "price": 1000,
+            "stock": 30,
+            "description": "remera roja manga corta",
+            "search": "remera rojo roja manga corta hombre",
+            "orden": 31,
+            "img": "../assets/h11.jpg"
+        },
+        {
+            "id": "h12",
+            "productName": "Jean rojo",
+            "price": 850,
+            "stock": 10,
+            "description": "pantalon de jean rojo",
+            "search": "pantalon jean rojo roja hombre",
+            "orden": 34,
+            "img": "../assets/h12.jpg"
+        },
+        {
+            "id": "m1",
+            "productName": "Buzo negro",
+            "price": 2500,
+            "stock": 15,
+            "description": "Buzo negro con capucha",
+            "search": "buzo negro negra con capucha canguro mujer",
+            "orden": 2,
+            "img": "../assets/m1.jpg"
+        },
+        {
+            "id": "m2",
+            "productName": "Remera negra",
+            "price": 900,
+            "stock": 20,
+            "description": "remera negra manga corta",
+            "search": "remera negro negra manga corta mujer",
+            "orden": 5,
+            "img": "../assets/m2.jpg"
+        },
+        {
+            "id": "m3",
+            "productName": "Jean negro",
+            "price": 3900,
+            "stock": 25,
+            "description": "pantalon de jean negro",
+            "search": "pantalon jean negro negra mujer",
+            "orden": 8,
+            "img": "../assets/m3.jpg"
+        },
+        {
+            "id": "m4",
+            "productName": "Buzo blanco",
+            "price": 2200,
+            "stock": 25,
+            "description": "buzo blanco con capucha",
+            "search": "buzo blanco blanca con capucha canguro mujer",
+            "orden": 11,
+            "img": "../assets/m4.jpg"
+        },
+        {
+            "id": "m5",
+            "productName": "Remera blanca",
+            "price": 960,
+            "stock": 30,
+            "description": "remera blanca manga corta",
+            "search": "remera blanco blanca manga corta mujer",
+            "orden": 14,
+            "img": "../assets/m5.jpg"
+        },
+        {
+            "id": "m6",
+            "productName": "Jean blanco",
+            "price": 3600,
+            "stock": 10,
+            "description": "pantalon de jean blanco mujer",
+            "search": "pantalon jean blanco blanca mujer",
+            "orden": 17,
+            "img": "../assets/m6.jpg"
+        },
+        {
+            "id": "m7",
+            "productName": "Buzo azul",
+            "price": 2100,
+            "stock": 15,
+            "description": "buzo azul con capucha",
+            "search": "buzo azul con capucha canguro mujer",
+            "orden": 20,
+            "img": "../assets/m7.jpg"
+        },
+        {
+            "id": "m8",
+            "productName": "Remera azul",
+            "price": 800,
+            "stock": 20,
+            "description": "remera azul sin mangas",
+            "search": "remera azul sin manga mujer",
+            "orden": 23,
+            "img": "../assets/m8.jpg"
+        },
+        {
+            "id": "m9",
+            "productName": "Jean azul",
+            "price": 3700,
+            "stock": 25,
+            "description": "Pantalon de jean azul",
+            "search": "pantalon jean azul mujer",
+            "orden": 26,
+            "img": "../assets/m9.jpg"
+        },
+        {
+            "id": "m10",
+            "productName": "Buzo Rojo",
+            "price": 2150,
+            "stock": 25,
+            "description": "buzo rojo con capucha",
+            "search": "buzo rojo con capucha canguro mujer",
+            "orden": 29,
+            "img": "../assets/m10.jpg"
+        },
+        {
+            "id": "m11",
+            "productName": "Remera roja",
+            "price": 860,
+            "stock": 30,
+            "description": "remera roja manga corta",
+            "search": "remera rojo roja manga corta mujer",
+            "orden": 32,
+            "img": "../assets/m11.jpg"
+        },
+        {
+            "id": "m12",
+            "productName": "jean rojo",
+            "price": 3100,
+            "stock": 10,
+            "description": "pantalon de jean rojo",
+            "search": "pantalon jean rojo roja mujer",
+            "orden": 35,
+            "img": "../assets/m12.jpg"
+        },
+        {
+            "id": "a1",
+            "productName": "Guantes blancos",
+            "price": 400,
+            "stock": 15,
+            "description": "guantes blancos de lana",
+            "search": "guantes blanco blanca lana accesorio",
+            "orden": 3,
+            "img": "../assets/a1.jpg"
+        },
+        {
+            "id": "a2",
+            "productName": "guantes negros",
+            "price": 500,
+            "stock": 20,
+            "description": "guantes negros de lana",
+            "search": "guantes negro negra lana accesorio",
+            "orden": 6,
+            "img": "../assets/a2.jpg"
+        },
+        {
+            "id": "a3",
+            "productName": "Guantes azules",
+            "price": 550,
+            "stock": 25,
+            "description": "Guantes azules de lana",
+            "search": "guantes azul lana accesorio",
+            "orden": 9,
+            "img": "../assets/a3.jpg"
+        },
+        {
+            "id": "a4",
+            "productName": "Guantes rojos",
+            "price": 350,
+            "stock": 25,
+            "description": "Guantes rojos de lana",
+            "search": "guantes rojo roja lana accesorio",
+            "orden": 12,
+            "img": "../assets/a4.jpg"
+        },
+        {
+            "id": "a5",
+            "productName": "Bufanda negra",
+            "price": 700,
+            "stock": 30,
+            "description": "bufanda negra de lana",
+            "search": "bufanda negra negro lana accesorio",
+            "orden": 15,
+            "img": "../assets/a5.jpg"
+        },
+        {
+            "id": "a6",
+            "productName": "Bufanda blanca",
+            "price": 750,
+            "stock": 10,
+            "description": "bufanda blanca de lana",
+            "search": "bufanda blanco blanca lana accesorio",
+            "orden": 18,
+            "img": "../assets/a6.jpg"
+        },
+        {
+            "id": "a7",
+            "productName": "Bufanda azul",
+            "price": 600,
+            "stock": 15,
+            "description": "bufanda azul de lana",
+            "search": "bufanda azul lana accesorio",
+            "orden": 21,
+            "img": "../assets/a7.jpg"
+        },
+        {
+            "id": "a8",
+            "productName": "Bufanda roja",
+            "price": 650,
+            "stock": 20,
+            "description": "bufanda roja de lana",
+            "search": "bufanda rojo roja lana accesorio",
+            "orden": 24,
+            "img": "../assets/a8.jpg"
+        },
+        {
+            "id": "a9",
+            "productName": "Gorro negro",
+            "price": 490,
+            "stock": 25,
+            "description": "gorro negro de lana",
+            "search": "gorro negro negra lana accesorio",
+            "orden": 27,
+            "img": "../assets/a9.jpg"
+        },
+        {
+            "id": "a10",
+            "productName": "Gorro blanco",
+            "price": 360,
+            "stock": 25,
+            "description": "gorro blanco de lana",
+            "search": "gorro blanco blanca lana accesorio",
+            "orden": 30,
+            "img": "../assets/a10.jpg"
+        },
+        {
+            "id": "a11",
+            "productName": "Gorro azul",
+            "price": 320,
+            "stock": 30,
+            "description": "gorro azul de lana",
+            "search": "gorro azul lana accesorio",
+            "orden": 33,
+            "img": "../assets/a11.jpg"
+        },
+        {
+            "id": "a12",
+            "productName": "Gorro rojo",
+            "price": 310,
+            "stock": 10,
+            "description": "gorro rojo de lana",
+            "search": "gorro rojo roja lana accesorio",
+            "orden": 36,
+            "img": "../assets/a12.jpg"
+        }
+    ]
+}

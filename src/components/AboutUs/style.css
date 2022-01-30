@@ -1,0 +1,21 @@
+.aboutUs__article--order{
+    width: 90%;
+    margin:2rem auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutUs__logo--size{
+   width: 30%;
+
+}
+
+.aboutUs__paragraph--style{
+    background-color: lightgray;
+    width: 70%;
+    font-size: medium;
+}
+.aboutUs__title--order{
+    font-size: xx-large;
+}

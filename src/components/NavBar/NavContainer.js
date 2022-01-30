@@ -1,16 +1,9 @@
-import React from 'react'
-import { IconoFlechaMenu } from '../iconos/Iconos';
-
-const NavContainer = ({ titulo, productoUno, productoDos, productoTres }) => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+const NavContainer = ({ titulo,dir}) => {
     return (
         <>
-            <li>{titulo}<IconoFlechaMenu/>
-                <ul className='ul__lista--mostrar'>
-                    <li className='li__opciones--estilos'>{productoUno}</li>
-                    <li className='li__opciones--estilos'>{productoDos}</li>
-                    <li className='li__opciones--estilos'>{productoTres}</li>
-                </ul>
-            </li>
+            <li><Link to={dir}>{titulo}</Link></li>
         </>
     )
 }

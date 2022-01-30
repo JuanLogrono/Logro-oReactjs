@@ -19,37 +19,32 @@ nav {
 li {
   list-style: none;
   font-family: Verdana, Tahoma, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border: solid darkgrey 1px;
   margin: 1px;
-  width: 15rem;
-  height: 1.7rem;
+  width: 14rem;
+  height: 1.2rem;
   text-align: center;
 }
-h1 {
-  font-size: 2rem;
+a{
+  text-decoration: none;
+  color: black;
 }
-.ul__lista--mostrar {
-  display: none;
-  width: 84%;
-  margin-top: -2px;
-  text-align: center;
+a:hover{
+  color: darkgrey;
 }
-.li__opciones--estilos {
-  border: black 1px solid;
-  width: 10rem;
-  text-align: center;
-  height: 1.5rem;
-  margin: 2px;
-  background-color: lightgray;
-}
-nav ul li:hover .ul__lista--mostrar {
-  display: block;
-}
+
+
 .header__buscador--estilo {
   border-style: none;
-}
-.header__buscador--estilo input {
   margin: 3px;
   height: 1.2rem;
+}
+
+.nav__link--size{
+  height: 6rem;
+  background-color: rgb(199, 195, 195);
+}
+.nav__link--imgSize{
+  height: inherit;
 }
