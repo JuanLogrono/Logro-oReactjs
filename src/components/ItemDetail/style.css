@@ -21,3 +21,12 @@
     width: 12rem;
     margin: 1rem 2rem;
 }
+
+.ItemDetailContainer__linkFinalizar--styles{
+    border: black 1px solid;
+    text-align: center;
+    width: 10rem;
+    background-color: darkslategrey;
+    color:black;
+    margin: 1rem auto
+}

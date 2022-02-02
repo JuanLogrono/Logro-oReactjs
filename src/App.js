@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/index"
 import AboutPage from "./components/pages/AboutPage";
 import ProductsPage from "./components/pages/ProductsPage";
 import ItemDetailPage from "./components/pages/ItemDetailPage"
+import CartPage from "./components/pages/CartPage";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
             <Route index element={<ProductsPage />} />
             <Route path=':productId' element={<ItemDetailPage />} />
           </Route>
+          <Route path='/Cart' element ={<CartPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
