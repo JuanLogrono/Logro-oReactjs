@@ -3,6 +3,7 @@ import { IconoCarrito, IconoLupa } from '../iconos/Iconos'
 import logo from '../iconos/imagenes/logo.png';
 import NavContainer from './NavContainer';
 import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget';
 
 const NavBar = () => {
     return (
@@ -17,7 +18,9 @@ const NavBar = () => {
                         <button><IconoLupa/></button>
                     </li>
                 </ul>
-                <IconoCarrito />
+                <Link className='link__cart--orden' to='/Cart' ><IconoCarrito/>
+                <CartWidget/></Link>
+                
             </nav>
         </header>
     )

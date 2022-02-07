@@ -48,3 +48,7 @@ a:hover{
 .nav__link--imgSize{
   height: inherit;
 }
+.link__cart--orden{
+  display: flex;
+  flex-direction: row;
+}

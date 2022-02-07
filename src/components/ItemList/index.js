@@ -11,7 +11,7 @@ const ItemList = () => {
       .then((itemData) => setProductData(itemData))
       .catch((err)=>console.error(err))
       .finally(()=>setIsLoading(true))
-  }, []);
+    }, []);
  if(isLoading){
   return( <div className="itemList__article--order">
     {productData.map((item) => (<Item key={item.id} items={item} />))}

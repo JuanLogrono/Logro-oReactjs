@@ -1,0 +1,11 @@
+.widget__cart--styles{
+    width: 40%;
+    height: max-content;
+    border-radius: 50%;
+    background-color: rgb(42, 58, 73);
+    color: aliceblue;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.7rem;
+    margin: 1px;
+}
