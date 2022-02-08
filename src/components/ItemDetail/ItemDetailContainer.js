@@ -9,8 +9,9 @@ const ItemDetailContainer = ({ productDetail }) => {
         const [add, setAdd] = useState(true);
         const { addItem, realStock, changeStock } = useContext(CartContext);
         
-        const onAdd = (count) => {
+        const onAdd = (count, setQtyDetail) => {
                 setAdd(!add)
+                setQtyDetail((prevState)=>prevState+count)
                 addItem(productDetail, count);
         }
         return (
@@ -22,8 +23,8 @@ const ItemDetailContainer = ({ productDetail }) => {
                                 <p>{productDetail.description}</p>
                                 <p>Precio: ${productDetail.price}</p>
                                 <b>Stock disponible  {(realStock > 0) ? realStock : productDetail.stock}</b>
-                                <ItemCount stock={productDetail.stock} initial={0} onAdd={onAdd} add={add} setAdd={setAdd} />
-                                <Link className="ItemDetailContainer__linkFinalizar--styles" to='/Cart' onClick={()=>changeStock(0)}>Finalizar Compra</Link>
+                                <ItemCount stock={(realStock > 0) ? realStock : productDetail.stock} initial={0} onAdd={onAdd} add={add} setAdd={setAdd} />
+                             {(add===false)&&<Link className="ItemDetailContainer__linkFinalizar--styles" to='/Cart' onClick={()=>changeStock(0)}>Finalizar Compra</Link>}
                         </div>
                 </div>
         )

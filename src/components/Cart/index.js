@@ -3,9 +3,16 @@ import { Link, useNavigate, } from "react-router-dom";
 import { CartContext } from '../../context/CartContext';
 import logo from "../iconos/imagenes/logo.png"
 import './style.css'
+import {Trash} from '../iconos/Iconos'
+
 const Cart = () => {
     const navigate=useNavigate()
     const { cartArray, removeItem, removeAll, buy, finishBuy} = useContext(CartContext);
+    let total= 0
+    for( let i in cartArray){
+        total+=cartArray[i].price * cartArray[i].qty
+    }
+
     if (finishBuy){
       return <div className='cart__buy--finish'><h1>Gracias Por su compra</h1></div>
     }else{
@@ -25,10 +32,10 @@ return(
             <p>{item.qty}</p>
             <p>${item.price}</p>
             <b>${item.price * item.qty}</b>
-            <button onClick={() => removeItem(item)}>x</button>
+            <button className='button__trash--style' onClick={() => removeItem(item)}>{<Trash/>}</button>
         </div>
         )}
-        <p>Total= </p>
+        <p className='cart__buttons--order cart__total--size'>Total=<b>${total}</b></p>
         <div className='cart__buttons--order'>
         <button onClick={()=>buy()}>Confirmar Compra</button>
         <button onClick={()=>removeAll("")}>Eliminar Compra</button>

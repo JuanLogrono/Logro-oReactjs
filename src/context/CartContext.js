@@ -12,7 +12,7 @@ export const CartProvider = ({ children }) => {
     
     
     const addItem = (cartItem, qty) => {
-        let actStock=0
+        let actStock = 0
         const newProduct = { ...cartItem, qty }
         let i = cartArray.findIndex(item => item.id === newProduct.id)
         if (i > -1) {
@@ -23,8 +23,8 @@ export const CartProvider = ({ children }) => {
             actStock= newProduct.stock - newProduct.qty
             newProduct.stock=actStock
             setCartArray((prevState) => [...prevState, newProduct]);
-            setRealStock(actStock)
-         }
+        }
+        setRealStock(actStock)
             fetch(`http://localhost:3001/products/${newProduct.id}`, {
             headers: {
                 Accept: "application/json",
