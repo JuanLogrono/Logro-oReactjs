@@ -30,8 +30,3 @@ const ItemList = () => {
 
 export default ItemList;
 
-/* let URL =`http://localhost:3001/products`;
-fetch(URL).then((respuesta) => respuesta.json())
-  .then((itemData) => setProductData(itemData))
-  .catch((err)=>console.error(err))
-  .finally(()=>setIsLoading(true))*/

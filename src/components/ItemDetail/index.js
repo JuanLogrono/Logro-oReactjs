@@ -27,9 +27,3 @@ const ItemDetail = () => {
 export default ItemDetail;
 
 
-/* const URL = `http://localhost:3001/products/${productId}`
-fetch(URL)
-.then((result) => result.json())
-.then((data) => setDetail(data))
-.catch((error) => console.error(error))
-.finally(() => setCharging(true)) */

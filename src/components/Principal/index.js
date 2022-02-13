@@ -22,7 +22,3 @@ const Home = () => {
 };
 
 export default Home;
-
-        /* const URL = "http://localhost:3001/products?_limit=4";
-        fetch(URL).then((res) => res.json())
-            .then((data) => setPrincipalData(data)) */
