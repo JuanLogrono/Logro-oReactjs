@@ -1,0 +1,35 @@
+.view__orderData--style{
+    width: 80%;
+    background-color: lightgrey;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.view__orderData--style img{
+    height: 4rem;
+}
+.view__productData--style{
+    width: 100%;
+    border-bottom: 1px black dashed ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.view_productData--total{
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 2px black solid;
+}
+
+.link__purchaseView--order{
+    width: 5rem;
+    height: 2rem;
+    align-self: flex-end;
+}
+
+.purchaseView__resumen--order{
+    align-self: flex-start;
+    font-size: 1.3rem;
+}

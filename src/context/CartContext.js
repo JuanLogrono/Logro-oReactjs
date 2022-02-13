@@ -1,13 +1,14 @@
 import { createContext, useState } from "react";
+import { getFirestore } from "../firebase";
 
 
 export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
-    
     const [cartArray, setCartArray] = useState([]);
     const [realStock, setRealStock] = useState(0);
     const [finishBuy,setFinishBuy] = useState(false)
+    
     const changeStock=(n)=>setRealStock(n)
     
     
@@ -25,28 +26,20 @@ export const CartProvider = ({ children }) => {
             setCartArray((prevState) => [...prevState, newProduct]);
         }
         setRealStock(actStock)
-            fetch(`http://localhost:3001/products/${newProduct.id}`, {
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            method: 'PATCH',
-            body: JSON.stringify({ stock: actStock })
-        })
-        
+        let newStock= getFirestore().collection('products').doc(newProduct.id)
+        newStock.update({stock: actStock})       
+    }
+    let total=0
+    for( let i in cartArray){
+        total+=cartArray[i].price * cartArray[i].qty
     }
 
     const removeItem = (remove) => {
         let i = cartArray.findIndex(item => item.id === remove.id);
         let actStock = cartArray[i].stock + remove.qty
-        fetch(`http://localhost:3001/products/${remove.id}`, {
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            method: 'PATCH',
-            body: JSON.stringify({ stock: actStock })
-        })
+
+        let newStock= getFirestore().collection('products').doc(remove.id)
+       newStock.update({stock: actStock})
         const copyCart = cartArray.slice(0, cartArray.length + 1)
         copyCart.splice(i, 1)
         setCartArray(copyCart)
@@ -54,28 +47,23 @@ export const CartProvider = ({ children }) => {
 
     }
     const removeAll = () => {
+        const db = getFirestore()
+        const batch =db.batch()
         let i = 0
         for (i in cartArray){
                 let actStock = cartArray[i].stock + cartArray[i].qty
-            fetch(`http://localhost:3001/products/${cartArray[i].id}`, {
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                },
-                method: 'PATCH',
-                body: JSON.stringify({ stock: actStock })
-            })
-        }           
+                let newStock= db.collection('products').doc(cartArray[i].id)
+    batch.update(newStock,{stock: actStock})
+        }
+         batch.commit(); 
         setCartArray([])
     }
+    
     const buy =()=>{
-        setCartArray([])
         setFinishBuy(true)
-        setTimeout(() => {
-            setFinishBuy(false)
-            }, 3000);
     }
+    
     return (
-        <CartContext.Provider value={{ cartArray, addItem, removeItem, removeAll, realStock, changeStock, buy, finishBuy }}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{ cartArray,setCartArray, addItem, removeItem, removeAll, realStock, changeStock, buy, finishBuy, setFinishBuy, total }}>{children}</CartContext.Provider>
     )
 }

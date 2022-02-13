@@ -1,5 +1,11 @@
-{
-  "products": [
+import React from 'react'
+import { getFirestore } from '../../firebase'
+
+
+
+
+
+const products= [
     {
       "productName": "Buzo Negro",
       "price": 1500,
@@ -361,4 +367,17 @@
       "categoryId":"accesorios"
     }
   ]
+
+
+const CargaProductos = () => {
+    const cargarProductos=()=>{
+     
+       products.forEach((prod)=>{getFirestore().collection("products").add(prod)})
+
+    }
+  return (
+    <div><button onClick={()=>cargarProductos()}>cargar</button></div>
+  )
 }
+
+export default CargaProductos;

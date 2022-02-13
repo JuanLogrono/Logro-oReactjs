@@ -4,17 +4,15 @@ import { CartContext } from '../../context/CartContext';
 import logo from "../iconos/imagenes/logo.png"
 import './style.css'
 import {Trash} from '../iconos/Iconos'
+import PurchaseForm from './PurchaseForm';
 
 const Cart = () => {
     const navigate=useNavigate()
-    const { cartArray, removeItem, removeAll, buy, finishBuy} = useContext(CartContext);
-    let total= 0
-    for( let i in cartArray){
-        total+=cartArray[i].price * cartArray[i].qty
-    }
+    const { cartArray, removeItem, removeAll, buy, finishBuy, total} = useContext(CartContext);
+    
 
     if (finishBuy){
-      return <div className='cart__buy--finish'><h1>Gracias Por su compra</h1></div>
+      return ( <PurchaseForm/> )
     }else{
 return(
         (cartArray.length>0)?<div className='cart__div--size'>
@@ -27,7 +25,7 @@ return(
             <h5>Total</h5>
         </div>
         {cartArray.map((item) => <div className='cart__item--ordenStyle' key={item.id}>
-            <img className='cart__img--size' src= {item.img} alt={item.productName}/>
+            <img className='cart__img--size' src={`../assets/${item.img}`} alt={item.productName}/>
             <p>{item.productName}</p>
             <p>{item.qty}</p>
             <p>${item.price}</p>

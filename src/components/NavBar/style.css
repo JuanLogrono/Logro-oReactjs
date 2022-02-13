@@ -52,3 +52,20 @@ a:hover{
   display: flex;
   flex-direction: row;
 }
+
+
+.nav__category--style ul{
+  display: none;
+  
+}
+
+.nav__category--style:hover ul{
+  display: block;
+  position:fixed;
+  
+}
+
+.nav__category--style ul li{
+  margin-left: -2.65rem;
+  background-color: grey;
+}

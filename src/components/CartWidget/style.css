@@ -1,8 +1,8 @@
 .widget__cart--styles{
-    width: 40%;
+    width: 45%;
     height: max-content;
     border-radius: 50%;
-    background-color: rgb(42, 58, 73);
+    background-color: rgba(5, 5, 5, 0.836);
     color: aliceblue;
     text-align: center;
     font-weight: 700;
