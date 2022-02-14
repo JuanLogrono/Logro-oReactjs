@@ -13,6 +13,7 @@ const Home = () => {
                         .catch((err)=> console.error(err))
                         .finally(()=>setIsLoading(true))
     }, []);
+    
     if (isLoading){
     return <article className='principal__article--order'>
         <img className='principal__img--size' src={banner} alt='banner'/>
