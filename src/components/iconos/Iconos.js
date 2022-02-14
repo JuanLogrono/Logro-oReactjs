@@ -3,7 +3,7 @@ import { ImCart, ImSearch } from 'react-icons/im'
 import { TiArrowSortedDown } from 'react-icons/ti'
 import { BsTrash } from 'react-icons/bs'
 import './style.css'
-import { AiTwotoneHome } from 'react-icons/ai'
+import { AiFillCloseCircle, AiTwotoneHome } from 'react-icons/ai'
 
 export const IconoHome =()=>{
     return(
@@ -11,6 +11,11 @@ export const IconoHome =()=>{
     )
 }
 
+export const IconoClose =()=>{
+    return(
+        <AiFillCloseCircle className='icono__home--estilo'/>
+    )
+}
 export const IconoCarrito = () => {
     return (
         <ImCart className='icono__carrito--estilo' />

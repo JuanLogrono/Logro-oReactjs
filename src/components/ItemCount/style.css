@@ -3,10 +3,19 @@
     width: 8rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-items: center;
     align-items: center;
-    margin: 0.5rem;
+    
 }
+.ItemCount__count--order button{
+    margin: 0.5rem;
+
+}
+.count__addToCart--size{
+    height: 2rem;
+    width: 10rem;
+}
+
 .onAdd__addItem--order{
     display: flex;
     flex-direction: column;
@@ -16,4 +25,4 @@
 .onAdd__addItem--order div{
     text-align: center;
     margin: 2px;
-}
+} 

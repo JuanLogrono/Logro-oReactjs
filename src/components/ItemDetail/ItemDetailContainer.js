@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
+import { IconoClose } from "../iconos/Iconos";
 import ItemCount from "../ItemCount";
 import './style.css';
 
@@ -16,7 +17,6 @@ const ItemDetailContainer = ({ productDetail }) => {
         }
         return (
                 <div className="ItemDetailContainer__cardDetail--order">
-                        <Link to='/products' onClick={()=>changeStock(0)}>X</Link>
                         <img className="itemDetailContainer__img--size" src={`../assets/${productDetail.img}`} alt={productDetail.productName} />
                         <div className="ItemDetailContainer__descriptionDetail--style">
                                 <h2>{productDetail.productName}</h2>
@@ -26,6 +26,7 @@ const ItemDetailContainer = ({ productDetail }) => {
                                 <ItemCount stock={(realStock > 0) ? realStock : productDetail.stock} initial={0} onAdd={onAdd} add={add} setAdd={setAdd} />
                              {(add===false)&&<Link className="ItemDetailContainer__linkFinalizar--styles" to='/Cart' onClick={()=>changeStock(0)}>Finalizar Compra</Link>}
                         </div>
+                        <Link className="detail__close--order" to='/products' onClick={()=>changeStock(0)}><IconoClose/></Link>
                 </div>
         )
 }
