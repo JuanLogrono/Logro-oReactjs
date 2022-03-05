@@ -1,29 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getFirestore } from '../../firebase';
+import useGetFirestore from '../../Hooks/useGetFirestore';
 import ItemDetailContainer from './ItemDetailContainer';
+import "./style.css"
 
 const ItemDetail = () => {
   const { productId } = useParams()
-  const [detail, setDetail] = useState([]);
-  const [charging, setCharging] = useState(false)
+  const { data, isLoading } = useGetFirestore(productId)
 
-  useEffect(() => {
-    const details = getFirestore().collection("products").doc(productId)
-    details.get().then((response) => { setDetail({ ...response.data(), id: response.id }) })
-      .catch((error) => console.error(error))
-      .finally(() => setCharging(true))      
-  }, [productId]);
 
-  if (charging) {
+
+  if (isLoading) {
+    return <div>cargando...</div>
+  } else {
     return (
       <article>
-        <ItemDetailContainer key={detail.id} productDetail={detail} />
+        <ItemDetailContainer key={data.id} productDetail={data} />
       </article>
     )
-  } else { return <div>cargando...</div> }
+  }
 }
-
 export default ItemDetail;
 
 

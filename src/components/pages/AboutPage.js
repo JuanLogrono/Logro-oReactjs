@@ -3,7 +3,7 @@ import AboutUs from '../AboutUs';
 
 const AboutPage = () => {
   return <section>
-   <AboutUs />
+    <AboutUs />
   </section>;
 };
 

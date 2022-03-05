@@ -3,7 +3,7 @@ import ItemDetail from '../ItemDetail';
 
 const ItemDetailPages = () => {
   return <div>
-      <ItemDetail/>
+    <ItemDetail />
   </div>;
 };
 

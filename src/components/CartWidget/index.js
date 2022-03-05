@@ -4,10 +4,10 @@ import './style.css'
 
 const CartWidget = () => {
   const { cartArray } = useContext(CartContext)
-
-  let qtyCart = cartArray.length
+  let qtyCart = 0
+  cartArray.forEach(data => { qtyCart += data.qty });
   return (
-    (qtyCart>0)?<div className='widget__cart--styles'>{qtyCart}</div>:null
+    (qtyCart > 0) ? <div className='widget__cart--styles'>{qtyCart}</div> : null
   )
 };
 

@@ -5,15 +5,15 @@ import { BsTrash } from 'react-icons/bs'
 import './style.css'
 import { AiFillCloseCircle, AiTwotoneHome } from 'react-icons/ai'
 
-export const IconoHome =()=>{
-    return(
-    <AiTwotoneHome className='icono__home--estilo'/>
+export const IconoHome = () => {
+    return (
+        <AiTwotoneHome className='icono__home--estilo' />
     )
 }
 
-export const IconoClose =()=>{
-    return(
-        <AiFillCloseCircle className='icono__home--estilo'/>
+export const IconoClose = () => {
+    return (
+        <AiFillCloseCircle className='icono__home--estilo' />
     )
 }
 export const IconoCarrito = () => {
@@ -36,6 +36,6 @@ export const IconoLupa = () => {
 
 export const Trash = () => {
     return (
-        <BsTrash />
+        <BsTrash className='icono__trash--hover' />
     )
 }

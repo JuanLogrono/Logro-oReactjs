@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Nala e-commerce (proyecto final react js coderhouse)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objetive
+simulate frontend of a virtual store
+
+## Project Create with
+ [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -68,3 +72,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Environment Variables
+Although they must be placed in the ".gitignore" file, to facilitate the correction it was upload to the repository.
+
+## Improvements to be made
+### implement pagination: to be able to add products if needed
+### change css to styled-components and with this the third point
+### create a responsive design
+

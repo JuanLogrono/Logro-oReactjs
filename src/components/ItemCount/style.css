@@ -1,28 +1,26 @@
-.ItemCount__count--order{
-    height: 1.2rem;
-    width: 8rem;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    
+.ItemCount__count--order {
+  height: 1.2rem;
+  width: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
-.ItemCount__count--order button{
-    margin: 0.5rem;
-
+.ItemCount__count--order button {
+  margin: 0.5rem;
 }
-.count__addToCart--size{
-    height: 2rem;
-    width: 10rem;
+.count__addToCart--size {
+  height: 2rem;
+  width: 10rem;
 }
 
-.onAdd__addItem--order{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    width: 10rem;
+.onAdd__addItem--order {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 10rem;
 }
-.onAdd__addItem--order div{
-    text-align: center;
-    margin: 2px;
-} 
+.onAdd__addItem--order div {
+  text-align: center;
+  margin: 2px;
+}

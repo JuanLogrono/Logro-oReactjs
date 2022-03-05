@@ -1,7 +1,12 @@
-.icono__carrito--estilo{
-    font-size: 2.5rem;
+.icono__carrito--estilo {
+  font-size: 2.5rem;
 }
 
-.icono__home--estilo{
-    font-size: 1.5rem;
+.icono__home--estilo {
+  font-size: 1.5rem;
+}
+
+.icono__trash--hover:hover {
+  transition: 1s;
+  transform: scale3d(1.1, 1.1, 1.1);
 }

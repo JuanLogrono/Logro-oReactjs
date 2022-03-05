@@ -11,20 +11,13 @@
   width: 80%;
   margin: auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.item__description--style{
-  width: 10rem;
-  height: 2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-}
-.item__img--size{
+.item__img--size {
   width: 9rem;
   height: 11rem;
-  margin-bottom:1rem ;
+  margin: 1rem;
 }

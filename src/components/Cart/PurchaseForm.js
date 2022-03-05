@@ -1,57 +1,59 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { getFirestore } from '../../firebase'
+import { IconoClose } from '../iconos/Iconos'
+import { useForm } from 'react-hook-form'
 import './style.css'
+
 const PurchaseForm = () => {
-    const navigate= useNavigate()
-    const { cartArray, total, setCartArray,setFinishBuy } = useContext(CartContext)
-    const [name, setName] = useState("");
-    const [surname, setSurname] = useState("")
-    const [eMail, setEmail] = useState("")
-    const [phone, setPhone] = useState(Number)    
-    
-    
-    const handleSubmit = (e) => { 
+    const navigate = useNavigate()
+    const { cartArray, total, setCartArray, setFinishBuy } = useContext(CartContext)
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = (data) => {
 
-        e.preventDefault()
+        let timestamp = Date()
+        let date = new Date(timestamp)
+        let today = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} : ${date.getHours()}:${date.getMinutes()}hs`
 
-        let timestamp= Date()
-        let date= new Date(timestamp)
-        let today= `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} : ${date.getHours()}:${date.getMinutes()}hs`
-
-        if( name === "" || surname === "" || phone === "" || eMail ==="" ){
-            console.log("error")
-        }else{
         let newOrder = {
-            buyer: {"name": name,"surname": surname,"eMail": eMail,"phone": phone},
+            buyer: { "name": data.name, "surname": data.surname, "eMail": data.eMail, "phone": data.phone },
             items: cartArray,
             date: today,
             total: total
         }
-      getFirestore().collection("orders").add(newOrder)
-                        .then((response)=>{navigate(`/viewPurchase/${response.id}`)})
-                        .finally(()=>setCartArray([]),
-                        setFinishBuy(false))
-    }}
+        getFirestore().collection("orders").add(newOrder)
+            .then((response) => { navigate(`/viewPurchase/${response.id}`) })
+            .finally(() => setCartArray([]),
+                setFinishBuy(false))
+    }
 
 
-    return (<div className='cart__form--style'>
-        <h3>Envíe sus datos para completar la compra </h3>
-        <form action="" method='post' className='cart__form--style' onSubmit={handleSubmit}>
-            <label htmlFor="name">Nombre:</label>
-            <input type="text" name='name' value={name} onChange={(e)=>setName(e.target.value)} />
-            <label htmlFor="surname">Apellido:</label>
-            <input type="text" name='surname' onChange={(e)=>setSurname(e.target.value)} />
-            <label htmlFor="eMail">E-Mail:</label>
-            <input type="email" name='eMail' onChange={(e)=>setEmail(e.target.value)} />
-            <label htmlFor="phone">Teléfono:</label>
-            <input type="tel" required pattern="[0-9]{4}[0-9]{4}" placeholder='xxxx-xxxx' name='phone' onChange={(e)=>setPhone(e.target.value)}/>
-            <button type='submit' value="Enviar">Enviar</button>
-        </form>
-    </div>
+    return (
+        <div>
+            <form className='cart__form--style' onSubmit={handleSubmit(onSubmit)}>
+                <button className='buyForm__buttonClose--order' onClick={() => setFinishBuy(false)}><IconoClose /></button>
+                <h3>Envíe sus datos para completar la compra </h3>
+                <label htmlFor="name">Nombre:</label>
+                <input name='name' {...register('name', { pattern: /\w+/, required: true })} />
+                {errors.name && <p className='form__error--style'>ingrese un Nombre valido por favor</p>}
 
-    )
+                <label htmlFor="surname">Apellido:</label>
+                <input name='surname' {...register('surname', { pattern: /\w+/, required: true })} />
+                {errors.surname && <p className='form__error--style'>ingrese un Apellido valido por favor</p>}
+
+                <label htmlFor="phone">Teléfono: </label>
+                <input name='phone' placeholder='XXXX-XXXX' {...register('phone', { pattern: /[0-9]{4}-[0-9]{4}/, required: true })} />
+                {errors.phone && <p className='form__error--style'>inserte un numero de teléfono valido por favor</p>}
+
+                <label htmlFor="eMail">E-Mail:</label>
+                <input name='eMail' {...register('eMail', { pattern: /^[Ññ-\w.%+]{1,64}@(?:[A-ZñÑ0-9-]{1,63}\.){1,125}[A-ZñÑ]{2,63}$/i, required: true })} />
+                {errors.eMail && <p className='form__error--style'>ingrese un e-mail valido por favor</p>}
+
+                <button type='submit' value="Enviar">Enviar</button>
+            </form>
+        </div>
+    );
 }
 
 export default PurchaseForm

@@ -17,6 +17,7 @@ nav {
   align-items: center;
 }
 li {
+  border: 1px black solid;
   list-style: none;
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 1rem;
@@ -26,14 +27,13 @@ li {
   height: 1.2rem;
   text-align: center;
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }
-a:hover{
-  color: darkgrey;
+a:hover {
+  color: rgb(70, 70, 199);
 }
-
 
 .header__buscador--estilo {
   border-style: none;
@@ -41,31 +41,28 @@ a:hover{
   height: 1.2rem;
 }
 
-.nav__link--size{
+.nav__link--size {
   height: 6rem;
   background-color: rgb(199, 195, 195);
 }
-.nav__link--imgSize{
+.nav__link--imgSize {
   height: inherit;
 }
-.link__cart--orden{
+.link__cart--orden {
   display: flex;
   flex-direction: row;
 }
 
-
-.nav__category--style ul{
+.nav__category--style ul {
   display: none;
-  
 }
 
-.nav__category--style:hover ul{
+.nav__category--style:hover ul {
   display: block;
-  position:fixed;
-  
+  position: fixed;
 }
 
-.nav__category--style ul li{
+.nav__category--style ul li {
   margin-left: -2.65rem;
   background-color: grey;
 }
