@@ -35,15 +35,15 @@ const PurchaseForm = () => {
                 <button className='buyForm__buttonClose--order' onClick={() => setFinishBuy(false)}><IconoClose /></button>
                 <h3>Envíe sus datos para completar la compra </h3>
                 <label htmlFor="name">Nombre:</label>
-                <input name='name' {...register('name', { pattern: /\w+/, required: true })} />
+                <input name='name' {...register('name', { pattern:/[A-Za-z]\w/, required: true })} />
                 {errors.name && <p className='form__error--style'>ingrese un Nombre valido por favor</p>}
 
                 <label htmlFor="surname">Apellido:</label>
-                <input name='surname' {...register('surname', { pattern: /\w+/, required: true })} />
+                <input name='surname' {...register('surname', { pattern: /[A-Za-z]\w/, required: true })} />
                 {errors.surname && <p className='form__error--style'>ingrese un Apellido valido por favor</p>}
 
                 <label htmlFor="phone">Teléfono: </label>
-                <input name='phone' placeholder='XXXX-XXXX' {...register('phone', { pattern: /[0-9]{4}-[0-9]{4}/, required: true })} />
+                <input name='phone' placeholder='XXXX-XXXX sin prefijos' {...register('phone', { pattern: /[0-9]{4}-[0-9]{4}/, required: true })} />
                 {errors.phone && <p className='form__error--style'>inserte un numero de teléfono valido por favor</p>}
 
                 <label htmlFor="eMail">E-Mail:</label>

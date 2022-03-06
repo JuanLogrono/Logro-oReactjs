@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImCart, ImSearch } from 'react-icons/im'
+import { ImCart} from 'react-icons/im'
 import { TiArrowSortedDown } from 'react-icons/ti'
 import { BsTrash } from 'react-icons/bs'
 import './style.css'
@@ -28,11 +28,6 @@ export const IconoFlechaMenu = () => {
     )
 }
 
-export const IconoLupa = () => {
-    return (
-        <ImSearch />
-    )
-}
 
 export const Trash = () => {
     return (

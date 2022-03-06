@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 import './style.css'
 
 
@@ -7,11 +8,12 @@ import './style.css'
 const ItemCount = ({ stock, onAdd, add, setAdd }) => {
     const navigate = useNavigate()
     const [count, setCount] = useState(0);
+    const {changeStock}=useContext(CartContext)
     const [qtyDetail, setQtyDetail] = useState(count)
     const addProduct = () => (count < stock) ? count + 1 : count;
     const subtractProduct = () => (count > 0) ? count - 1 : count;
     function restartCount() {
-        setCount(0)
+        changeStock(0)
         navigate('/products')
         setAdd(!add)
     }
@@ -28,7 +30,10 @@ const ItemCount = ({ stock, onAdd, add, setAdd }) => {
                     <button className='count__addToCart--size' onClick={() => onAdd(count, setQtyDetail)}>Agregar al carrito</button>
                 </div>
             </div>)
-    } else { return (<><p>Se agregaron {qtyDetail} unidades</p> <button onClick={() => restartCount()}>Continuar compra</button></>) }
+    } else {
+        return (<><p>Se agregaron {qtyDetail} unidades</p>
+            <button onClick={() => restartCount()}>Continuar compra</button></>)
+    }
 };
 export default ItemCount;
 

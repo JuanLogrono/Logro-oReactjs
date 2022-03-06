@@ -23,6 +23,7 @@ const ViewPurchase = () => {
       <div key={itemsPurchased.id} className='view__orderData--style'>
         <h2>Gracias:</h2>
         <h3>{`${itemsPurchased.buyer.name} ${itemsPurchased.buyer.surname}`}, por su compra</h3>
+        <h4>Para cualquier consulta el código de su compra es: "<strong>{itemsPurchased.id}</strong>"</h4>
         <p className='purchaseView__resumen--order'>resumen:</p>
         {itemsPurchased.items.map((data) => <div key={data.id} className='view__productData--style'>
           <img src={`../assets/${data.img}`} alt={data.productName} />
